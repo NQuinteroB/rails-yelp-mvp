@@ -2,6 +2,20 @@
   <h1><%= @restaurant.name %></h1>
   <br>
   <p><%= @restaurant.address %></p>
-  <%= @restaurant.category %> <br>
+  <p><%= @restaurant.category %></p>
+  <hr>
+  <p><strong>Reviews</strong></p>
+  <ul class="list-group">
+    <% @restaurant.reviews.each do |review| %>
+      <li class="list-group-item">
+        <p><%= review.content %></p>
+        <p><%= review.rating %></p>
+      </li>
+    <% end %>
+  </ul>
+<br>
+
+
+  <hr>
   <%= link_to 'restaurant list', restaurants_path %>
 </div>
