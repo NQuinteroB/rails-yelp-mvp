@@ -18,8 +18,6 @@ class ReviewsController < ApplicationController
     end
   end
 
-
-
   private
 
   def set_restaurant
@@ -29,9 +27,5 @@ class ReviewsController < ApplicationController
   def review_params
     params.require(:review).permit(:content, :rating)
   end
-
-
-
-
 
 end
